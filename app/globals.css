@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Roboto bold. */
+    @font-face {
+        font-family: "Roboto-Bold";
+        src: url("./../public/font/Lato-Bold.ttf") format("truetype");
+        font-weight: 800;
+        font-display: swap;
+    }
+    /* Roboto medium. */
+    @font-face {
+        font-family: "Roboto-Medium";
+        src: url("./../public/font/Oswald-Regular.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+    }
+    /* Roboto regular. */
+    @font-face {
+        font-family: "Roboto-Regular";
+        src: url("./../public/font/Lato-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-display: swap;
+    }
+
+    :root {
+        /* background colors */
+        --custom-200: #e5e5e5;
+        --custom-300: #d4d4d4;
+        --custom-400: #a3a3a3;
+        --custom-500: #737373;
+        --custom-600: #525252;
+        --custom-700: #404040;
+        --custom-800: #262626;
+        --custom-900: #171717;
+        --custom-950: #0a0a0a;
+
+        --background: #faf2f3;
+        --primary: #cf3c4f;
+        --secondary: #ee8895;
+        --accent: #f65166;
+    }
+
+    * {
+        @apply m-0 box-border select-none scroll-smooth p-0 focus-visible:outline-none;
+    }
+
+    body {
+        @apply relative min-h-screen bg-slate-900 font-roboto-regular text-lg text-black;
+    }
+}
+
+@layer components {
+    p {
+        @apply leading-[2rem];
+    }
+    h1 {
+        @apply text-4xl font-extrabold;
+    }
+    button,
+    a {
+        @apply focus-visible:scale-105 focus-visible:transform focus-visible:opacity-90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:transition-all focus-visible:duration-500;
+    }
+}
