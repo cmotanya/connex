@@ -1,6 +1,12 @@
 "use client";
 
-import { IconMinus, IconPlus } from "@tabler/icons-react";
+import {
+    IconDeviceMobile,
+    IconMail,
+    IconMap,
+    IconMinus,
+    IconPlus,
+} from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import navElements from "../lib/navElements";
@@ -95,12 +101,12 @@ const MobileNav = () => {
                         variants={navVariants}
                         aria-label="Mobile Navigation"
                         className={cn(
-                            "fixed -right-0 top-0 h-dvh w-full overflow-y-auto bg-200 text-4xl",
+                            "fixed -right-0 top-0 flex h-dvh w-full flex-col justify-between overflow-y-auto bg-200 text-xl",
                             isOpen ? "right-0" : "-right-full"
                         )}
                     >
                         <motion.div
-                            className="flex h-full w-full flex-col items-center justify-center gap-5"
+                            className="flex h-[60%] w-full flex-col items-center justify-center gap-5"
                             variants={{
                                 open: {
                                     transition: {
@@ -119,7 +125,7 @@ const MobileNav = () => {
                                         variants={itemVariants}
                                         className="group relative w-full px-2"
                                     >
-                                        <li className="flex w-full items-center justify-center rounded-md bg-primary hover:bg-accent">
+                                        <li className="flex w-full items-center justify-between rounded-md bg-primary hover:bg-accent">
                                             <Link
                                                 href={item.href}
                                                 onClick={(e) => {
@@ -135,7 +141,7 @@ const MobileNav = () => {
                                                     }
                                                 }}
                                                 className={cn(
-                                                    "flex w-full items-center justify-center gap-2 rounded-md p-4",
+                                                    "flex w-full items-center justify-between gap-2 rounded-md p-4",
                                                     isActive
                                                         ? "bg-accent"
                                                         : "bg-primary hover:bg-accent"
@@ -191,7 +197,7 @@ const MobileNav = () => {
                                                             duration: 0.3,
                                                         }}
                                                         className={cn(
-                                                            "mb-2 w-full rounded-md overflow-hidden"
+                                                            "mb-2 w-full overflow-hidden rounded-md"
                                                         )}
                                                     >
                                                         {item.subItem.map(
@@ -225,7 +231,7 @@ const MobileNav = () => {
                                                                                 sub.href
                                                                             }
                                                                             className={cn(
-                                                                                "block rounded-sm px-2 py-3",
+                                                                                "my-1 block rounded-sm px-2 py-3",
                                                                                 isSubActive
                                                                                     ? "bg-accent"
                                                                                     : "bg-secondary hover:bg-accent"
@@ -252,6 +258,8 @@ const MobileNav = () => {
                                 );
                             })}
                         </motion.div>
+
+                        <NavAddress />
                     </motion.nav>
                 )}
             </AnimatePresence>
@@ -260,3 +268,33 @@ const MobileNav = () => {
 };
 
 export default MobileNav;
+
+const NavAddress = () => {
+    return (
+        <div className="mb-24 ml-4 flex flex-col gap-8 text-xl">
+            <div className="mt-2 flex items-start gap-4">
+                <IconMap className="text-primary" />
+                <div className="-mt-1">
+                    <h2>Location</h2>
+                    <span>2nd Floor Jubilee Arcade Moi Avenue Mombasa </span>
+                </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+                <IconMail className="text-primary" />
+                <div className="-mt-1">
+                    <h2>Mail Us</h2>
+                    <span>info.connexinternational@gmail.com</span>
+                </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+                <IconDeviceMobile className="text-primary" />
+                <div className="-mt-1">
+                    <h2>Call Us</h2>
+                    <span>(+254) 72222222</span>
+                </div>
+            </div>
+        </div>
+    );
+};
