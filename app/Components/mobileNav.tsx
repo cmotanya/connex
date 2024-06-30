@@ -106,7 +106,7 @@ const MobileNav = () => {
                         )}
                     >
                         <motion.div
-                            className="flex h-[60%] w-full flex-col items-center justify-center gap-5"
+                            className="flex min-h-[60%] mt-[4rem] w-full flex-col items-center justify-center gap-5"
                             variants={{
                                 open: {
                                     transition: {
