@@ -27,15 +27,15 @@
 
     :root {
         /* background colors */
-        --custom-200: #e5e5e5;
-        --custom-300: #d4d4d4;
-        --custom-400: #a3a3a3;
-        --custom-500: #737373;
-        --custom-600: #525252;
-        --custom-700: #404040;
-        --custom-800: #262626;
-        --custom-900: #171717;
-        --custom-950: #0a0a0a;
+        --custom-200: #e5e7eb;
+        --custom-300: #d1d5db;
+        --custom-400: #9ca3af;
+        --custom-500: #6b7280;
+        --custom-600: #4b5563;
+        --custom-700: #374151;
+        --custom-800: #1f2937;
+        --custom-900: #111827;
+        --custom-950: #030712;
 
         --background: #faf2f3;
         --primary: #cf3c4f;
