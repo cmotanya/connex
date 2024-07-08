@@ -280,31 +280,35 @@ export default MobileNav;
 
 const NavAddress = () => {
     return (
-        <div className="flex-shrink-0 gap-6 bg-800 px-4 py-6 text-xl font-roboto-regular">
+        <div className="flex-shrink-0 gap-6 bg-800 px-4 py-6 font-roboto-regular text-lg">
             <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4">
-                    <IconMap className="text-primary" />
-                    <div className="-mt-1">
+                    <IconMap className="text-primary" size={30} />
+                    <div>
                         <h2>Location</h2>
-                        <span>
+                        <Link href={"/"}>
                             2nd Floor Jubilee Arcade Moi Avenue Mombasa{" "}
-                        </span>
+                        </Link>
                     </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                    <IconMail className="text-primary" />
-                    <div className="-mt-1">
+                    <IconMail className="text-primary" size={30} />
+                    <div>
                         <h2>Mail Us</h2>
-                        <span>info.connexinternational@gmail.com</span>
+                        <Link
+                            href={"mailto:info.connexinternational@gmail.com"}
+                        >
+                            info.connexinternational@gmail.com
+                        </Link>
                     </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                    <IconDeviceMobile className="text-primary" />
-                    <div className="-mt-1">
+                    <IconDeviceMobile className="text-primary" size={30} />
+                    <div>
                         <h2>Call Us</h2>
-                        <span>(+254) 72222222</span>
+                        <Link href={"tel:+25472222222"}>(+254) 72222222</Link>
                     </div>
                 </div>
             </div>
