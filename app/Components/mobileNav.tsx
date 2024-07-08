@@ -280,7 +280,7 @@ export default MobileNav;
 
 const NavAddress = () => {
     return (
-        <div className="flex-shrink-0 gap-6 bg-800 px-4 py-6 text-xl">
+        <div className="flex-shrink-0 gap-6 bg-800 px-4 py-6 text-xl font-roboto-regular">
             <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4">
                     <IconMap className="text-primary" />
