@@ -124,7 +124,7 @@ const MainPage = () => {
                                     className="object-fit object-cover"
                                 />
                                 <div className="absolute inset-0 bg-800 opacity-50"></div>
-                                <div className="absolute bottom-3 left-3 z-[9999] h-[30%] overflow-clip text-ellipsis text-balance text-sm text-200">
+                                <div className="absolute bottom-3 left-3 z-[100] h-[30%] overflow-clip text-ellipsis text-balance text-sm text-200">
                                     {item.description}
                                 </div>
                             </div>

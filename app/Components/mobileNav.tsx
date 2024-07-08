@@ -105,8 +105,8 @@ const MobileNav = () => {
                             isOpen ? "right-0" : "-right-full"
                         )}
                     >
-                        <motion.div
-                            className="flex min-h-[60%] mt-[4rem] w-full flex-col items-center justify-center gap-5"
+                        <motion.ul
+                            className="fixed top-0 mt-[4rem] h-1/2 min-h-[60%] w-full gap-3"
                             variants={{
                                 open: {
                                     transition: {
@@ -119,13 +119,13 @@ const MobileNav = () => {
                             {navElements.map((item, index) => {
                                 const isActive = activeLink === item.href;
                                 return (
-                                    <motion.ul
+                                    <motion.div
                                         key={item.href}
                                         role="menu"
                                         variants={itemVariants}
-                                        className="group relative w-full px-2"
+                                        className="relative w-full px-2"
                                     >
-                                        <li className="flex w-full items-center justify-between rounded-md bg-primary hover:bg-accent">
+                                        <li className="flex w-full items-center justify-between rounded-md bg-primary hover:bg-accent ">
                                             <Link
                                                 href={item.href}
                                                 onClick={(e) => {
@@ -163,7 +163,7 @@ const MobileNav = () => {
                                                         }
                                                     >
                                                         {openIndicator ===
-                                                        index ? (
+                                                            index ? (
                                                             <IconMinus />
                                                         ) : (
                                                             <IconPlus />
@@ -254,10 +254,10 @@ const MobileNav = () => {
                                                     </motion.li>
                                                 )}
                                         </AnimatePresence>
-                                    </motion.ul>
+                                    </motion.div>
                                 );
                             })}
-                        </motion.div>
+                        </motion.ul>
 
                         <NavAddress />
                     </motion.nav>
@@ -271,7 +271,7 @@ export default MobileNav;
 
 const NavAddress = () => {
     return (
-        <div className="mb-24 ml-4 flex flex-col gap-8 text-xl">
+        <div className="bottom-0 mb-24 fixed ml-4 flex flex-col gap-8 text-xl">
             <div className="mt-2 flex items-start gap-4">
                 <IconMap className="text-primary" />
                 <div className="-mt-1">
