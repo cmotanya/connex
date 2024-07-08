@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 function NotFound() {
     return (
-        <div className="flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-gray-900 text-center text-gray-300">
+        <div className="flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-gray-900 px-2 text-center text-gray-300 md:px-0">
             <motion.div
                 className="pb-10"
                 initial={{ opacity: 0, y: -50 }}
