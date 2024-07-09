@@ -78,7 +78,7 @@ const NavContactSection = () => {
                                         {info.title}
                                     </motion.h2>
                                     <motion.span
-                                        className="text-sm text-300 transition-colors group-hover:text-200"
+                                        className="text-sm text-400 transition-colors group-hover:text-200"
                                         variants={iconVariant}
                                     >
                                         {info.content}
