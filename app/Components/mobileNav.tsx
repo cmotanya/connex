@@ -169,9 +169,9 @@ const MobileNav = () => {
                                                         >
                                                             {openIndicator ===
                                                             index ? (
-                                                                <IconPlus className="rotate-45 transition transform" />
+                                                                <IconPlus className="rotate-45 transform transition" />
                                                             ) : (
-                                                                <IconPlus className="transition"/>
+                                                                <IconPlus className="transition" />
                                                             )}
                                                         </button>
                                                     )}
@@ -280,9 +280,9 @@ export default MobileNav;
 
 const NavAddress = () => {
     return (
-        <div className="flex-shrink-0 gap-6 bg-800 px-4 py-6 font-roboto-regular text-lg">
-            <div className="flex flex-col gap-6">
-                <div className="flex items-start gap-4">
+        <div className="flex-shrink-0 gap-6 bg-800 p-2 font-roboto-regular text-lg">
+            <div className="flex flex-col gap-3">
+                <div className="flex items-start gap-4 rounded-md bg-700 p-2">
                     <IconMap className="text-primary" size={30} />
                     <div>
                         <h2>Location</h2>
@@ -292,7 +292,7 @@ const NavAddress = () => {
                     </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 rounded-md bg-700 p-2">
                     <IconMail className="text-primary" size={30} />
                     <div>
                         <h2>Mail Us</h2>
@@ -304,7 +304,7 @@ const NavAddress = () => {
                     </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 rounded-md bg-700 p-2">
                     <IconDeviceMobile className="text-primary" size={30} />
                     <div>
                         <h2>Call Us</h2>
