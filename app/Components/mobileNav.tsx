@@ -16,7 +16,9 @@ import { useEffect, useRef, useState } from "react";
 
 const MobileNav = () => {
     const [openIndicator, setOpenIndicator] = useState<number | null>(null);
-    const [activeLink, setActiveLink] = useState<string | null>(null);
+    const [activeLink, setActiveLink] = useState<string | null>(
+        navElements[0].href
+    );
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef<HTMLElement>(null);
 
@@ -107,7 +109,7 @@ const MobileNav = () => {
                     >
                         <div className="flex h-full w-full flex-col">
                             <motion.ul
-                                className="h-1/2 min-h-[60%] w-full flex-grow gap-3 overflow-y-auto px-2 pb-4 pt-[4rem]"
+                                className="h-1/2 min-h-[60%] w-full flex-grow gap-3 overflow-hidden overflow-y-auto px-2 pb-4 pt-[4rem]"
                                 variants={{
                                     open: {
                                         transition: {
@@ -280,37 +282,60 @@ export default MobileNav;
 
 const NavAddress = () => {
     return (
-        <div className="flex-shrink-0 gap-6 bg-800 p-2 font-roboto-regular text-lg">
-            <div className="flex flex-col gap-3">
-                <div className="flex items-start gap-4 rounded-md bg-700 p-2">
-                    <IconMap className="text-primary" size={30} />
-                    <div>
-                        <h2>Location</h2>
-                        <Link href={"/"}>
-                            2nd Floor Jubilee Arcade Moi Avenue Mombasa{" "}
-                        </Link>
-                    </div>
-                </div>
+        <div className="flex-shrink-0 bg-800 p-2 font-roboto-regular text-lg">
+            <div className="flex flex-col gap-2">
+                <motion.div
+                    initial={{ opacity: 0, height: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, height: "auto", scale: 1 }}
+                    transition={{ duration: 0.2, delay: 0.2 }}
+                >
+                    <Link
+                        className="flex items-start gap-4 rounded-md bg-700 p-2"
+                        href={"/"}
+                    >
+                        <IconMap className="text-primary" size={30} />
+                        <div>
+                            <h2>Location</h2>
+                            <span>
+                                2nd Floor Jubilee Arcade Moi Avenue Mombasa{" "}
+                            </span>
+                        </div>
+                    </Link>
+                </motion.div>
 
-                <div className="flex items-start gap-4 rounded-md bg-700 p-2">
-                    <IconMail className="text-primary" size={30} />
-                    <div>
-                        <h2>Mail Us</h2>
-                        <Link
-                            href={"mailto:info.connexinternational@gmail.com"}
-                        >
-                            info.connexinternational@gmail.com
-                        </Link>
-                    </div>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5, height: 0 }}
+                    animate={{ opacity: 1, height: "auto", scale: 1 }}
+                    transition={{ duration: 0.2, delay: 0.4 }}
+                >
+                    <Link
+                        className="flex items-start gap-4 rounded-md bg-700 p-2"
+                        href={"mailto:info.connexinternational@gmail.com"}
+                    >
+                        <IconMail className="text-primary" size={30} />
+                        <div>
+                            <h2>Mail Us</h2>
+                            <span>info.connexinternational@gmail.com</span>
+                        </div>
+                    </Link>
+                </motion.div>
 
-                <div className="flex items-start gap-4 rounded-md bg-700 p-2">
-                    <IconDeviceMobile className="text-primary" size={30} />
-                    <div>
-                        <h2>Call Us</h2>
-                        <Link href={"tel:+25472222222"}>(+254) 72222222</Link>
-                    </div>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, height: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, height: "auto", scale: 1 }}
+                    transition={{ duration: 0.2, delay: 0.6 }}
+                >
+                    <Link
+                        className="flex items-start gap-4 rounded-md bg-700 p-2"
+                        href={"tel:+25472222222"}
+                    >
+                        <IconDeviceMobile className="text-primary" size={30} />
+                        <div>
+                            <h2>Call Us</h2>
+                            <span>(+254) 72222222</span>
+                        </div>
+                    </Link>
+                </motion.div>
             </div>
         </div>
     );
