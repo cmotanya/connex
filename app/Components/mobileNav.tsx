@@ -169,9 +169,9 @@ const MobileNav = () => {
                                                         >
                                                             {openIndicator ===
                                                             index ? (
-                                                                <IconMinus />
+                                                                <IconPlus className="rotate-45 transition transform" />
                                                             ) : (
-                                                                <IconPlus />
+                                                                <IconPlus className="transition"/>
                                                             )}
                                                         </button>
                                                     )}

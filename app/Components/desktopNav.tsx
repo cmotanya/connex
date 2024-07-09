@@ -60,7 +60,7 @@ const DesktopNav = () => {
                                     }
                                 }}
                                 className={cn(
-                                    "flex w-full items-center justify-center gap-2 rounded-md p-2",
+                                    "flex w-full items-center justify-around gap-2 rounded-md p-2",
                                     isActive
                                         ? "bg-accent"
                                         : "bg-primary hover:bg-accent"
@@ -75,9 +75,9 @@ const DesktopNav = () => {
                                         onClick={() => handleToggle(index)}
                                     >
                                         {openIndicator === index ? (
-                                            <IconMinus />
+                                            <IconPlus className="rotate-45 transform transition" />
                                         ) : (
-                                            <IconPlus />
+                                            <IconPlus className="transition" />
                                         )}
                                     </span>
                                 )}
