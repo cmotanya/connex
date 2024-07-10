@@ -1,11 +1,6 @@
 "use client";
 
-import {
-    IconDeviceMobile,
-    IconMail,
-    IconMap,
-    IconPlus,
-} from "@tabler/icons-react";
+import { IconBrandWhatsapp, IconPlus } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import navElements from "../lib/navElements";
@@ -107,6 +102,11 @@ const MobileNav = () => {
                             isOpen ? "right-0" : "-right-full"
                         )}
                     >
+                        <IconBrandWhatsapp
+                            className="z-1000 fixed bottom-4 right-4 block md:hidden"
+                            size={40}
+                        />
+
                         <div className="flex h-full w-full flex-col">
                             <motion.ul
                                 className="h-1/2 min-h-[60%] w-full flex-grow gap-3 overflow-hidden overflow-y-auto px-2 pb-4 pt-[4rem]"
@@ -204,7 +204,7 @@ const MobileNav = () => {
                                                                 duration: 0.3,
                                                             }}
                                                             className={cn(
-                                                                "w-full overflow-hidden rounded-md"
+                                                                "ml-[10%] w-[90%] overflow-hidden rounded-md"
                                                             )}
                                                         >
                                                             {item.subItem.map(
@@ -241,7 +241,7 @@ const MobileNav = () => {
                                                                                     sub.href
                                                                                 }
                                                                                 className={cn(
-                                                                                    "my-1 block rounded-sm px-2 py-3",
+                                                                                    "my-1 block rounded-md px-2 py-3",
                                                                                     isSubActive
                                                                                         ? "bg-600"
                                                                                         : "bg-600 hover:bg-600"
