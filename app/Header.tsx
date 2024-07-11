@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import DesktopNav from "./Components/desktopNav";
 import MobileNav from "./Components/mobileNav";
-import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 const Header = () => {
     return (
