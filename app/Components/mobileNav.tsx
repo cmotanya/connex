@@ -257,8 +257,8 @@ const MobileNav = () => {
                                                                                 className={cn(
                                                                                     "my-1 block transform rounded-md px-2 py-3 transition-all duration-300 active:scale-95",
                                                                                     isSubActive
-                                                                                        ? "bg-600"
-                                                                                        : "hover:bg-650 bg-600 hover:text-primary"
+                                                                                        ? "bg-600 text-primary"
+                                                                                        : "hover:bg-650 bg-600"
                                                                                 )}
                                                                                 onClick={() => {
                                                                                     handleSubItemClick(
