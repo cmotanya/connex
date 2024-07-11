@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 
 const HamburgerMenu = ({
@@ -7,6 +8,24 @@ const HamburgerMenu = ({
     onclick: () => void;
     isOpen: boolean;
 }) => {
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 0) {
+                setHasScrolled(true);
+            } else {
+                setHasScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
         <button
             onClick={onclick}
@@ -15,7 +34,8 @@ const HamburgerMenu = ({
             aria-controls="mobile-menu"
             className={cn(
                 "relative z-[1010] flex h-12 w-12 cursor-pointer flex-col items-center justify-center rounded-full transition-colors duration-300",
-                isOpen ? "bg-primary" : "bg-800"
+                isOpen ? "bg-primary" : "bg-800",
+                hasScrolled ? "bg-900" : "bg-800"
             )}
         >
             <div className="relative h-6 w-6">

@@ -87,7 +87,7 @@ const Footer = () => {
                 {/* Subscribe to our newsletter */}
                 <div className="w-full rounded-md bg-900 p-2 md:w-[50%]">
                     <h3 className="mb-4 text-primary md:mb-8">
-                        Stay upto late with our news and insight.
+                        Stay upto date with our news and insight.
                     </h3>
 
                     <div className="flex flex-col">
