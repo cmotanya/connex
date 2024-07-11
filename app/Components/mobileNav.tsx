@@ -84,6 +84,22 @@ const MobileNav = () => {
             opacity: 0,
         },
     };
+
+    const subItemVariants = {
+        hidden: {
+            opacity: 0,
+            y: -10,
+        },
+        visible: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: index * 0.1,
+                duration: 0.3,
+            },
+        }),
+    };
+
     return (
         <div className="fixed right-5 top-5 z-[1000] block text-300 md:hidden">
             <HamburgerMenu onclick={toggleMenu} isOpen={isOpen} />
@@ -203,14 +219,12 @@ const MobileNav = () => {
                                                             transition={{
                                                                 duration: 0.3,
                                                             }}
-                                                            className={cn(
-                                                                "ml-[10%] w-[90%] overflow-hidden rounded-md"
-                                                            )}
+                                                            className="ml-[10%] w-[90%] overflow-hidden rounded-md"
                                                         >
                                                             {item.subItem.map(
                                                                 (
                                                                     sub,
-                                                                    index
+                                                                    subIndex
                                                                 ) => {
                                                                     const isSubActive =
                                                                         activeLink ===
@@ -220,38 +234,26 @@ const MobileNav = () => {
                                                                             key={
                                                                                 sub.href
                                                                             }
-                                                                            initial={{
-                                                                                opacity: 0,
-                                                                            }}
-                                                                            animate={{
-                                                                                opacity: 1,
-                                                                            }}
-                                                                            exit={{
-                                                                                opacity: 0,
-                                                                            }}
-                                                                            transition={{
-                                                                                duration: 0.2,
-                                                                                delay:
-                                                                                    0.2 *
-                                                                                    index,
-                                                                            }}
+                                                                            custom={
+                                                                                subIndex
+                                                                            }
+                                                                            variants={
+                                                                                subItemVariants
+                                                                            }
+                                                                            initial="hidden"
+                                                                            animate="visible"
+                                                                            exit="hidden"
                                                                         >
                                                                             <Link
                                                                                 href={
                                                                                     sub.href
                                                                                 }
                                                                                 className={cn(
-                                                                                    "my-1 block rounded-md px-2 py-3",
+                                                                                    "my-1 block transform rounded-md px-2 py-3 transition-transform active:scale-105",
                                                                                     isSubActive
                                                                                         ? "bg-600"
                                                                                         : "bg-600 hover:bg-600"
                                                                                 )}
-                                                                                onClick={() =>
-                                                                                    handleLinkClick(
-                                                                                        sub.href,
-                                                                                        index
-                                                                                    )
-                                                                                }
                                                                             >
                                                                                 {
                                                                                     sub.name
