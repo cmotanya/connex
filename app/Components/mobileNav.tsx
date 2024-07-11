@@ -8,6 +8,7 @@ import { cn } from "../utils/cn";
 import HamburgerMenu from "./hamburgerMenu";
 import { useEffect, useRef, useState } from "react";
 import NavContactSection from "./navContactSection";
+import SocialsNav from "./socialsNav";
 
 const MobileNav = () => {
     const [openIndicator, setOpenIndicator] = useState<number | null>(null);
@@ -124,11 +125,6 @@ const MobileNav = () => {
                             isOpen ? "right-0" : "-right-full"
                         )}
                     >
-                        <IconBrandWhatsapp
-                            className="z-1000 fixed bottom-4 right-4 block md:hidden"
-                            size={40}
-                        />
-
                         <div className="flex h-full w-full flex-col">
                             <motion.ul
                                 className="h-1/2 min-h-[60%] w-full flex-grow gap-3 overflow-hidden overflow-y-auto px-2 pb-4 pt-[4rem]"
@@ -284,6 +280,8 @@ const MobileNav = () => {
                         </div>
 
                         <NavContactSection />
+
+                        <SocialsNav />
                     </motion.nav>
                 )}
             </AnimatePresence>
