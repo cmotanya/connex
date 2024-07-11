@@ -78,7 +78,7 @@ const MainPage = () => {
                         exit="exit"
                         variants={containerVariants}
                         key={`content-${currentIndex}`}
-                        className="absolute top-1/4 z-[999] space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[20%] md:w-[50%] md:text-start"
+                        className="absolute top-[15%] z-[999] space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[20%] md:top-1/4 md:w-[50%] md:text-start"
                     >
                         <div
                             className={cn(
@@ -100,7 +100,7 @@ const MainPage = () => {
                             <button className="rounded-lg bg-primary px-4 py-3 uppercase text-black">
                                 {homeImage[currentIndex].button1}
                             </button>
-                            <button className="rounded-lg px-4 py-3 uppercase ring-2 ring-primary">
+                            <button className="bg-850 rounded-lg px-4 py-3 uppercase hover:bg-700">
                                 {homeImage[currentIndex].button2}
                             </button>
                         </div>
