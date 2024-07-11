@@ -109,7 +109,7 @@ const Footer = () => {
                     Limited.All rights reserved
                 </p>
 
-                <div className="flex gap-5 whitespace-nowrap">
+                <div className="flex gap-3 whitespace-nowrap md:gap-5">
                     <button className="">Privacy Policy</button>
                     <button>Terms and Conditions</button>
                     <button>Sitemap</button>
