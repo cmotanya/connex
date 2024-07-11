@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "../utils/cn";
 import { IconPlus } from "@tabler/icons-react";
-import navElements from "../lib/navElements";
+import navElements from "../lib/nav-elements";
 import { useEffect, useRef, useState } from "react";
 
 const DesktopNav = () => {
@@ -54,7 +54,7 @@ const DesktopNav = () => {
                                 href={item.href}
                                 onClick={(e) => {
                                     handleLinkClick(item.href, index);
-                                    if (item.subItem.length > 0) {
+                                    if (item.subItems.length > 0) {
                                         e.preventDefault();
                                         handleToggle(index);
                                     }
@@ -69,7 +69,7 @@ const DesktopNav = () => {
                                 {item.name}
 
                                 {/* indicators */}
-                                {item.subItem.length > 0 && (
+                                {item.subItems.length > 0 && (
                                     <span
                                         className="cursor-pointer"
                                         onClick={() => handleToggle(index)}
@@ -86,7 +86,7 @@ const DesktopNav = () => {
 
                         {/* Sub menu */}
                         <AnimatePresence>
-                            {item.subItem.length > 0 &&
+                            {item.subItems.length > 0 &&
                                 openIndicator === index && (
                                     <motion.li
                                         initial={{ opacity: 0, height: 0 }}
@@ -104,7 +104,7 @@ const DesktopNav = () => {
                                             "absolute left-0 top-full z-50 mt-1 w-full overflow-hidden rounded-sm bg-secondary"
                                         )}
                                     >
-                                        {item.subItem.map((sub, index) => {
+                                        {item.subItems.map((sub, index) => {
                                             const isActive =
                                                 activeLink === sub.href;
                                             return (

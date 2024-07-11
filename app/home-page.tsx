@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import homeImage from "./lib/imageLinks";
+import homeImage from "./lib/image-links";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "./utils/cn";

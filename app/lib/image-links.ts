@@ -1,4 +1,4 @@
-const homeImage = [
+const HomeImage = [
     {
         title: "Connex International",
         description:
@@ -33,4 +33,4 @@ const homeImage = [
     },
 ];
 
-export default homeImage;
+export default HomeImage;

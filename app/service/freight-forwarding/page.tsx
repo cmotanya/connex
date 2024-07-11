@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { images, services } from "./data";
+import Footer from "@/app/footer";
 
 const FreightForwarding = () => {
     return (
@@ -73,6 +74,8 @@ const FreightForwarding = () => {
                     </div>
                 ))}
             </div>
+
+            <Footer />
         </section>
     );
 };

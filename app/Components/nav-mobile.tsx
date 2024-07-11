@@ -3,7 +3,7 @@
 import { IconBrandWhatsapp, IconPlus } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import navElements from "../lib/navElements";
+import navElements from "../lib/nav-elements";
 import { cn } from "../utils/cn";
 import HamburgerMenu from "./nav-hamburger-menu";
 import { useEffect, useRef, useState } from "react";
@@ -155,7 +155,7 @@ const MobileNav = () => {
                                                             index
                                                         );
                                                         if (
-                                                            item.subItem
+                                                            item.subItems
                                                                 .length > 0
                                                         ) {
                                                             e.preventDefault();
@@ -172,7 +172,7 @@ const MobileNav = () => {
                                                     {item.name}
 
                                                     {/* indicators */}
-                                                    {item.subItem.length >
+                                                    {item.subItems.length >
                                                         0 && (
                                                         <button
                                                             aria-expanded={
@@ -200,7 +200,7 @@ const MobileNav = () => {
 
                                             {/* Sub menu */}
                                             <AnimatePresence>
-                                                {item.subItem.length > 0 &&
+                                                {item.subItems.length > 0 &&
                                                     openIndicator === index && (
                                                         <motion.li
                                                             initial={{
@@ -223,7 +223,7 @@ const MobileNav = () => {
                                                             }}
                                                             className="ml-[10%] w-[90%] overflow-hidden rounded-md"
                                                         >
-                                                            {item.subItem.map(
+                                                            {item.subItems.map(
                                                                 (
                                                                     sub,
                                                                     subIndex

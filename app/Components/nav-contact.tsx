@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { ContactInformation } from "../lib/contactInformation";
+import { ContactInformation } from "../lib/contact-information";
 import { motion } from "framer-motion";
 
 const NavContactSection = () => {

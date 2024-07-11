@@ -1,14 +1,14 @@
-const navElements = [
+const NavElements = [
     {
         name: "Home",
         href: "/",
-        subItem: [],
+        subItems: [],
     },
     {
         name: "Service",
         href: "/service",
 
-        subItem: [
+        subItems: [
             {
                 name: "Freight Forwarding",
                 href: "/service/freight-forwarding",
@@ -26,7 +26,7 @@ const navElements = [
     {
         name: "Corporate",
         href: "/corporate",
-        subItem: [
+        subItems: [
             {
                 name: "About",
                 href: "/corporate/about",
@@ -44,8 +44,8 @@ const navElements = [
     {
         name: "Contact",
         href: "/contact",
-        subItem: [],
+        subItems: [],
     },
 ];
 
-export default navElements;
+export default NavElements;

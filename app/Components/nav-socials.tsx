@@ -1,12 +1,6 @@
-import {
-    IconBrandFacebookFilled,
-    IconBrandWhatsapp,
-    IconBrandX,
-    IconBrandYoutubeFilled,
-} from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import React from "react";
-import { socialLink } from "../lib/socialLink";
+import { SocialLinks } from "../lib/social-links";
 
 const SocialsNav = () => {
     const containerVariants = {
@@ -36,11 +30,11 @@ const SocialsNav = () => {
             animate="visible"
         >
             <div className="flex items-center justify-around md:hidden">
-                {socialLink().map((item, index) => (
+                {SocialLinks.map((item, index) => (
                     <motion.button
                         key={index}
                         variants={iconVariants}
-                        className="bg-750 rounded-lg p-2 transition-colors hover:bg-650"
+                        className="rounded-lg bg-750 p-2 transition-colors hover:bg-650"
                     >
                         {item.icon}
                     </motion.button>
