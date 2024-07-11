@@ -262,8 +262,7 @@ const MobileNav = () => {
                                                                                 )}
                                                                                 onClick={() => {
                                                                                     handleSubItemClick(
-                                                                                        sub.href,
-                                                                                        index
+                                                                                        sub.href
                                                                                     );
                                                                                 }}
                                                                             >
