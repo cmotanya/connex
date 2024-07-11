@@ -30,10 +30,15 @@
         --custom-200: #e5e7eb;
         --custom-300: #d1d5db;
         --custom-400: #9ca3af;
+        --custom-450: hsla(218, 11%, 65%, 0.5);
         --custom-500: #6b7280;
+        --custom-550: hsla(220, 9%, 46%, 0.5);
         --custom-600: #4b5563;
+        --custom-650: hsla(215, 14%, 34%, 0.5);
         --custom-700: #374151;
+        --custom-750: hsla(217, 19%, 27%, 0.5);
         --custom-800: #1f2937;
+        --custom-850: hsla(215, 28%, 17%, 0.5);
         --custom-900: #111827;
         --custom-950: #030712;
 

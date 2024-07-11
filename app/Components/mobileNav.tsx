@@ -22,6 +22,11 @@ const MobileNav = () => {
         setOpenIndicator(openIndicator === index ? null : index);
     };
 
+    // toggles the state of the menu
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     // Updates the active link and open indicators based on the provided href and index
     const handleLinkClick = (href: string, index: number) => {
         setActiveLink(href);
@@ -31,9 +36,10 @@ const MobileNav = () => {
         }
     };
 
-    // toggles the state of the menu
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
+    const handleSubItemClick = (href: string) => {
+        setActiveLink(href);
+        setOpenIndicator(null); // Close the sub menu
+        toggleMenu(); // Close the entire mobile menu
     };
 
     // Handles click event when it occurs outside of the navRef element
@@ -249,11 +255,17 @@ const MobileNav = () => {
                                                                                     sub.href
                                                                                 }
                                                                                 className={cn(
-                                                                                    "my-1 block transform rounded-md px-2 py-3 transition-transform active:scale-105",
+                                                                                    "my-1 block transform rounded-md px-2 py-3 transition-all duration-300 active:scale-95",
                                                                                     isSubActive
                                                                                         ? "bg-600"
-                                                                                        : "bg-600 hover:bg-600"
+                                                                                        : "hover:bg-650 bg-600 hover:text-primary"
                                                                                 )}
+                                                                                onClick={() => {
+                                                                                    handleSubItemClick(
+                                                                                        sub.href,
+                                                                                        index
+                                                                                    );
+                                                                                }}
                                                                             >
                                                                                 {
                                                                                     sub.name
