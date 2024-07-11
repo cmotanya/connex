@@ -34,8 +34,13 @@ const HamburgerMenu = ({
             aria-controls="mobile-menu"
             className={cn(
                 "relative z-[1010] flex h-12 w-12 cursor-pointer flex-col items-center justify-center rounded-full transition-colors duration-300",
-                isOpen ? "bg-primary" : "bg-800",
-                hasScrolled ? "bg-900" : "bg-800"
+                hasScrolled && isOpen
+                    ? "bg-primary"
+                    : hasScrolled
+                      ? "bg-900"
+                      : isOpen
+                        ? "bg-primary"
+                        : "bg-800"
             )}
         >
             <div className="relative h-6 w-6">
