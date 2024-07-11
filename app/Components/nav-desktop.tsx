@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "../utils/cn";
-import { IconMinus, IconPlus } from "@tabler/icons-react";
+import { IconPlus } from "@tabler/icons-react";
 import navElements from "../lib/navElements";
 import { useEffect, useRef, useState } from "react";
 

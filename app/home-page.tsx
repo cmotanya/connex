@@ -100,7 +100,7 @@ const MainPage = () => {
                             <button className="rounded-lg bg-primary px-4 py-3 uppercase text-black">
                                 {homeImage[currentIndex].button1}
                             </button>
-                            <button className="bg-850 rounded-lg px-4 py-3 uppercase hover:bg-700">
+                            <button className="rounded-lg bg-850 px-4 py-3 uppercase hover:bg-700">
                                 {homeImage[currentIndex].button2}
                             </button>
                         </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import DesktopNav from "./Components/desktopNav";
-import MobileNav from "./Components/mobileNav";
+import DesktopNav from "./Components/nav-desktop";
+import MobileNav from "./Components/nav-mobile";
 
 const Header = () => {
     return (

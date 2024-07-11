@@ -5,10 +5,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import navElements from "../lib/navElements";
 import { cn } from "../utils/cn";
-import HamburgerMenu from "./hamburgerMenu";
+import HamburgerMenu from "./nav-hamburger-menu";
 import { useEffect, useRef, useState } from "react";
-import NavContactSection from "./navContactSection";
-import SocialsNav from "./socialsNav";
+import NavContactSection from "./nav-contact";
+import SocialsNav from "./nav-socials";
 
 const MobileNav = () => {
     const [openIndicator, setOpenIndicator] = useState<number | null>(null);
@@ -254,7 +254,7 @@ const MobileNav = () => {
                                                                                     "my-1 block transform rounded-md px-2 py-3 transition-all duration-300 active:scale-95",
                                                                                     isSubActive
                                                                                         ? "bg-600 text-primary"
-                                                                                        : "hover:bg-650 bg-600"
+                                                                                        : "bg-600 hover:bg-650"
                                                                                 )}
                                                                                 onClick={() => {
                                                                                     handleSubItemClick(

@@ -37,13 +37,13 @@ const SocialsNav = () => {
         >
             <div className="flex items-center justify-around md:hidden">
                 {socialLink().map((item, index) => (
-                    <motion.span
+                    <motion.button
                         key={index}
                         variants={iconVariants}
-                        className="bg-750 rounded-lg p-2 hover:bg-600"
+                        className="bg-750 rounded-lg p-2 transition-colors hover:bg-650"
                     >
                         {item.icon}
-                    </motion.span>
+                    </motion.button>
                 ))}
             </div>
         </motion.div>
