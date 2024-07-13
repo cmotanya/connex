@@ -114,14 +114,14 @@ const FreightForwarding = () => {
                     variants={containerVariants}
                 >
                     <motion.h2
-                        className="mb-8 font-roboto-bold text-4xl font-semibold uppercase text-accent md:text-5xl"
+                        className="md:mb-8 mb-4 font-roboto-bold text-4xl font-semibold uppercase text-accent md:text-5xl"
                         variants={fadeInUpVariants}
                     >
                         Services Offered
                     </motion.h2>
 
                     <motion.div
-                        className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+                        className="grid grid-cols-1 gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3"
                         variants={containerVariants}
                     >
                         {services.map((service, index) => (
