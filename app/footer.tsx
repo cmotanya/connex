@@ -9,8 +9,8 @@ const Footer = () => {
     const service = NavElements.find((item) => item.name === "Service");
 
     return (
-        <footer className="mt-10 w-full bg-800 p-2">
-            <div className="flex flex-col justify-between gap-3 md:flex-row">
+        <footer className="absolute left-0 right-0 mt-10 w-full bg-800 p-2">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
                 <div className="w-full space-y-6 rounded-md bg-900 p-3 md:w-[45%] md:space-y-12">
                     {/* Logo and description */}
                     <div className="space-y-6 md:space-y-12">
@@ -33,6 +33,7 @@ const Footer = () => {
                         {SocialLinks.map((link, index) => (
                             <button
                                 key={index}
+                                aria-label={`Visit our ${link.name} page.`}
                                 className="rounded-md bg-750 p-1 transition-all duration-300 hover:bg-850"
                             >
                                 {link.icon}
@@ -42,7 +43,7 @@ const Footer = () => {
                 </div>
 
                 {/* Navigation links */}
-                <div className="w-full rounded-md bg-900 p-2 md:w-[30%]">
+                <div className="w-full rounded-md bg-900 p-2 md:w-[35%]">
                     <h3 className="mb-2 mt-2 uppercase text-primary md:mb-4">
                         Our Services
                     </h3>
@@ -72,7 +73,7 @@ const Footer = () => {
                             return (
                                 <button
                                     key={index}
-                                    className="flex gap-5 rounded-md p-1 text-400 transition-all duration-300 hover:bg-800 hover:text-200"
+                                    className="flex items-center gap-5 rounded-md p-1 text-400 transition-all duration-300 hover:bg-800 hover:text-200"
                                 >
                                     <span className="">{info.icon}</span>
                                     <span className="text-start text-base">
@@ -90,26 +91,31 @@ const Footer = () => {
                         Stay upto date with our news and insight.
                     </h3>
 
-                    <div className="flex flex-col">
+                    <form className="flex flex-col">
                         <input
                             type="email"
+                            id="email"
+                            required
                             placeholder="Enter your email address"
-                            className="rounded-md bg-800 p-2 transition-all duration-300 placeholder:text-base focus-within:ring-2 focus-within:ring-600"
+                            className="rounded-md bg-800 p-[0.5rem] transition-all duration-300 placeholder:text-base focus-within:ring-2 focus-within:ring-600"
                         />
-                        <button className="mt-3 w-fit rounded-md bg-accent px-2 py-1 text-base font-semibold uppercase text-black transition-all duration-300 hover:bg-secondary">
+                        <button
+                            type="submit"
+                            className="mt-3 w-fit rounded-full bg-accent px-4 py-[0.45rem] text-base font-semibold uppercase text-black transition-all duration-300 hover:bg-secondary"
+                        >
                             Subscribe
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
 
-            <div className="mt-4 flex flex-col items-center justify-between px-2 text-base text-300 md:mt-10 md:flex-row">
-                <p className="mx-auto mb-2 w-full text-start md:w-auto">
+            <div className="mt-3 mb-2 flex flex-col-reverse items-center justify-between gap-3 px-2 text-base text-300 md:mt-6 md:flex-row">
+                <p className="mx-auto w-full text-start leading-6">
                     &copy;{new Date().getFullYear()} Connex International
                     Limited.All rights reserved
                 </p>
 
-                <div className="flex gap-3 whitespace-nowrap md:gap-5">
+                <div className="flex gap-5 whitespace-nowrap md:justify-between">
                     <button className="">Privacy Policy</button>
                     <button>Terms and Conditions</button>
                     <button>Sitemap</button>

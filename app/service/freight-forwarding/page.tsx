@@ -54,12 +54,12 @@ const FreightForwarding = () => {
                     ))}
                 </div>
 
-                <button className="mt-4 rounded-md bg-primary p-3 font-bold text-black hover:bg-accent">
+                <button className="mt-4 rounded-md bg-primary p-2 font-bold text-black hover:bg-accent">
                     CONTACT US TODAY
                 </button>
             </div>
 
-            <div className="mt-10 flex w-full flex-wrap justify-around gap-4 md:w-[80%]">
+            <div className="mt-10 flex w-full flex-wrap gap-4 md:w-[80%]">
                 {images.map((image, index) => (
                     <div key={index} className="w-full md:w-auto">
                         <Image
