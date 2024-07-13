@@ -175,7 +175,7 @@ const FreightForwarding = () => {
                     >
                         Our Global Reach
                     </motion.h2>
-                    <motion.div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                    <motion.div className="grid grid-cols-1 gap-4 md:grid-cols-4">
                         {images.map((image, index) => (
                             <motion.div
                                 key={index}
