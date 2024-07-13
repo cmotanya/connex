@@ -32,7 +32,7 @@ const Footer = () => {
 
     return (
         <motion.footer
-            className="absolute left-0 right-0 mt-10 w-full bg-800 p-2"
+            className="absolute left-0 right-0 w-full bg-800 p-2 pt-2 md:pt-5"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -141,13 +141,12 @@ const Footer = () => {
                     </h3>
 
                     <form className="flex flex-col">
-                        <motion.input
+                        <input
                             type="email"
                             id="email"
                             required
                             placeholder="Enter your email address"
                             className="rounded-md bg-800 p-[0.5rem] transition-all duration-300 placeholder:text-base focus-within:ring-2 focus-within:ring-600"
-                            whileFocus={{ scale: 1.05 }}
                         />
                         <motion.button
                             type="submit"
@@ -170,14 +169,14 @@ const Footer = () => {
                     Limited.All rights reserved
                 </p>
 
-                <div className="flex gap-5 whitespace-nowrap md:justify-between">
-                    <motion.button whileHover={{ scale: 1.1 }}>
+                <div className="flex gap-7 whitespace-nowrap md:justify-between">
+                    <motion.button whileHover={{ scale: 1.05 }}>
                         Privacy Policy
                     </motion.button>
-                    <motion.button whileHover={{ scale: 1.1 }}>
+                    <motion.button whileHover={{ scale: 1.05 }}>
                         Terms and Conditions
                     </motion.button>
-                    <motion.button whileHover={{ scale: 1.1 }}>
+                    <motion.button whileHover={{ scale: 1.05 }}>
                         Sitemap
                     </motion.button>
                 </div>
