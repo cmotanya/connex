@@ -166,11 +166,11 @@ const FreightForwarding = () => {
                 </motion.div>
 
                 <motion.div
-                    className="mt-16 md:mt-24"
+                    className="mt-8 md:mt-24"
                     variants={containerVariants}
                 >
                     <motion.h2
-                        className="mb-8 font-roboto-bold text-3xl font-semibold text-accent md:text-4xl"
+                        className="md:mb-8 mb-2 font-roboto-bold text-3xl font-semibold text-accent md:text-4xl"
                         variants={fadeInUpVariants}
                     >
                         Our Global Reach
