@@ -49,7 +49,7 @@ const NavContactSection = () => {
 
     return (
         <motion.div
-            className="flex-shrink-0 bg-800 p-2 font-roboto-regular text-lg"
+            className="flex-shrink-0 bg-950 p-2 font-roboto-regular text-lg"
             variants={containerVariant}
             initial="hidden"
             animate="visible"
@@ -60,7 +60,7 @@ const NavContactSection = () => {
                         <motion.div variants={itemVariant} key={index}>
                             <Link
                                 href={info.href}
-                                className="group flex items-start gap-4 rounded-md bg-700 p-2"
+                                className="group flex items-start gap-4 rounded-md bg-850 p-2"
                             >
                                 <motion.span
                                     className="text-primary"

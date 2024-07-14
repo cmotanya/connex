@@ -34,7 +34,8 @@ const SocialsNav = () => {
                     <motion.button
                         key={index}
                         variants={iconVariants}
-                        className="rounded-lg bg-750 p-2 transition-colors hover:bg-650"
+                        whileTap={{ scale: 0.9 }}
+                        className="rounded-lg bg-800 p-2 transition-colors hover:bg-850"
                     >
                         {item.icon}
                     </motion.button>

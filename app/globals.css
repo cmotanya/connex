@@ -55,6 +55,9 @@
     body {
         @apply relative min-h-screen bg-slate-900 font-roboto-regular text-lg text-black;
     }
+    body.no-scroll {
+        @apply overflow-hidden;
+    }
 }
 
 @layer components {

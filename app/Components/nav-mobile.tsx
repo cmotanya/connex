@@ -43,6 +43,14 @@ const MobileNav = () => {
         toggleMenu(); // Close the entire mobile menu
     };
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    }, [isOpen]);
+
     // Handles click event when it occurs outside of the navRef element
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -165,7 +173,7 @@ const MobileNav = () => {
                                                     className={cn(
                                                         "flex w-full items-center justify-between rounded-md p-4",
                                                         isActive
-                                                            ? "bg-700"
+                                                            ? "bg-primary"
                                                             : "bg-800 hover:bg-accent"
                                                     )}
                                                 >
@@ -253,8 +261,8 @@ const MobileNav = () => {
                                                                                 className={cn(
                                                                                     "my-1 block transform rounded-md px-2 py-3 transition-all duration-300 active:scale-95",
                                                                                     isSubActive
-                                                                                        ? "bg-600 text-primary"
-                                                                                        : "bg-600 hover:bg-650"
+                                                                                        ? "text-primary"
+                                                                                        : "bg-800 hover:bg-850"
                                                                                 )}
                                                                                 onClick={() => {
                                                                                     handleSubItemClick(
