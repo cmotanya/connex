@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { images, services } from "./data";
 import { motion } from "framer-motion";
+import { getBlurDataURL } from "@/app/lib/blur-image";
 
 const FreightForwarding = () => {
     const containerVariants = {
@@ -90,7 +91,7 @@ const FreightForwarding = () => {
                             width={1300}
                             height={400}
                             placeholder="blur"
-                            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDEyMDAgNDAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWYyOTM3Ii8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzM3NDE1MSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieCIgdmFsdWVzPSItMTAwJTsxMDAlIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9yZWN0Pjwvc3ZnPg=="
+                            blurDataURL={getBlurDataURL()}
                             className="mx-auto h-[30rem] rounded-sm object-cover object-center shadow-lg"
                         />
                     </motion.div>
@@ -185,7 +186,7 @@ const FreightForwarding = () => {
                                     width={300}
                                     height={200}
                                     placeholder="blur"
-                                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDEyMDAgNDAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWYyOTM3Ii8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzM3NDE1MSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieCIgdmFsdWVzPSItMTAwJTsxMDAlIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9yZWN0Pjwvc3ZnPg=="
+                                    blurDataURL={getBlurDataURL()}
                                     className="h-[12rem] w-full object-cover object-center transition-transform duration-300 hover:scale-110"
                                 />
                             </motion.div>

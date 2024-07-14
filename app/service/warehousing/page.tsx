@@ -5,6 +5,7 @@ import Image from "next/image";
 import { images } from "./data";
 import { cn } from "@/app/utils/cn";
 import { motion } from "framer-motion";
+import { getBlurDataURL } from "@/app/lib/blur-image";
 
 const Warehousing = () => {
     const containerVariant = {
@@ -40,7 +41,7 @@ const Warehousing = () => {
                     alt=""
                     fill
                     placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDEyMDAgNDAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWYyOTM3Ii8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzM3NDE1MSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieCIgdmFsdWVzPSItMTAwJTsxMDAlIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9yZWN0Pjwvc3ZnPg=="
+                    blurDataURL={getBlurDataURL()}
                 />
                 <div className="absolute inset-0 h-full bg-850"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -93,7 +94,7 @@ const Warehousing = () => {
                                     width={400}
                                     height={400}
                                     placeholder="blur"
-                                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDEyMDAgNDAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWYyOTM3Ii8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzM3NDE1MSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieCIgdmFsdWVzPSItMTAwJTsxMDAlIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9yZWN0Pjwvc3ZnPg=="
+                                    blurDataURL={getBlurDataURL()}
                                 />
                             </motion.div>
                             <div className="w-full px-2 md:w-[50%]">
