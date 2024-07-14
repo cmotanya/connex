@@ -60,7 +60,7 @@ const NavContactSection = () => {
                         <motion.div variants={itemVariant} key={index}>
                             <Link
                                 href={info.href}
-                                className="group flex items-start gap-4 rounded-md bg-850 p-2"
+                                className="group flex items-start gap-4 rounded-md bg-750 p-2 active:bg-800"
                             >
                                 <motion.span
                                     className="text-primary"
