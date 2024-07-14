@@ -19,18 +19,7 @@ const CustomsBrokerage = () => {
         },
     };
 
-    const itemVariant = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
-            },
-        },
-    };
+
 
     return (
         <motion.section
@@ -52,7 +41,7 @@ const CustomsBrokerage = () => {
                 <div className="absolute inset-0 h-full bg-850"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <motion.h1
-                        className="text-balance rounded-md bg-850 p-6 text-center text-400 md:whitespace-nowrap md:text-start md:text-5xl"
+                        className="text-balance rounded-md bg-850 p-6 text-center text-300 md:whitespace-nowrap md:text-start md:text-5xl"
                         initial={{ scale: 0.5 }}
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 300 }}
