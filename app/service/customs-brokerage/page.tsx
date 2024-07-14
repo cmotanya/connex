@@ -7,11 +7,37 @@ import Footer from "@/app/footer";
 import { images } from "./data";
 
 const CustomsBrokerage = () => {
+    const containerVariant = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                delayChildren: 0.3,
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariant = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                damping: 12,
+                stiffness: 100,
+            },
+        },
+    };
+
     return (
         <motion.section
             className="font-roboto-regular text-200"
             initial="hidden"
             whileInView="visible"
+            variants={containerVariant}
             viewport={{ once: true, amount: 0.1 }}
         >
             <div className="relative h-dvh">
@@ -38,7 +64,7 @@ const CustomsBrokerage = () => {
             </div>
 
             <div className="mx-auto max-w-7xl px-2 pb-2 pt-10 md:pb-5">
-                <div className="">
+                <motion.div variants={itemVariant}>
                     <h2 className="text-3xl font-bold uppercase text-primary">
                         Navigating the complexities of International trade
                     </h2>
@@ -54,11 +80,16 @@ const CustomsBrokerage = () => {
                         transactions, allowing you to focus on growing your
                         business.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 gap-3 pt-5 md:grid-cols-4 md:gap-5">
+                <motion.div className="grid grid-cols-1 gap-3 pt-5 md:grid-cols-4 md:gap-5">
                     {images.map((image, index) => (
-                        <div key={index} className="">
+                        <motion.div
+                            key={index}
+                            variants={itemVariant}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
                             <Image
                                 src={image.src}
                                 alt=""
@@ -66,12 +97,15 @@ const CustomsBrokerage = () => {
                                 height={500}
                                 className="mx-auto h-52 w-full rounded-md object-cover object-center"
                             />
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
 
-            <div className="mx-auto mt-5 w-full bg-850 px-3 py-5 md:pl-12">
+            <motion.div
+                className="mx-auto mt-5 w-full bg-850 px-3 py-5 md:pl-12"
+                variants={itemVariant}
+            >
                 <h2 className="text-2xl text-accent">
                     Why choose our Customs Brokerage Services?
                 </h2>
@@ -123,12 +157,12 @@ const CustomsBrokerage = () => {
 
                 <button
                     type="button"
-                    className="mt-8 rounded-full bg-primary p-3 text-black"
+                    className="mt-8 rounded-full bg-primary p-3 font-bold text-black"
                 >
                     {" "}
                     Contact Us for a Consultation.
                 </button>
-            </div>
+            </motion.div>
 
             <Footer />
         </motion.section>
