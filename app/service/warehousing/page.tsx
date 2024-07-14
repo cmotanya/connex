@@ -44,10 +44,10 @@ const Warehousing = () => {
                     blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjFmMSIvPjwvc3ZnPg=="
                     className="mx-auto h-[30rem] rounded-sm object-cover object-center"
                 />
-                <div className="absolute inset-0 h-full backdrop-blur-sm"></div>
+                <div className="absolute inset-0 h-full bg-850"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <motion.h1
-                        className="text-balance rounded-md bg-850 p-6 text-center text-300 md:whitespace-nowrap md:text-start md:text-5xl"
+                        className="text-balance rounded-md bg-850 p-6 text-center text-primary md:whitespace-nowrap md:text-start md:text-5xl"
                         initial={{ scale: 0.5 }}
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -63,7 +63,7 @@ const Warehousing = () => {
                     <motion.div
                         key={index}
                         className={cn(
-                            "flex gap-8 md:p-5",
+                            "flex gap-8 px-2 md:p-5",
                             index % 2 === 0 ? "bg-800 text-400" : "bg-950"
                         )}
                         variants={itemVariants}
@@ -89,9 +89,9 @@ const Warehousing = () => {
                                     className="w-full rounded-md object-cover object-center"
                                 />
                             </motion.div>
-                            <div className="flex w-full flex-col justify-around space-y-3 pb-3 md:w-[50%]">
+                            <div className="w-full px-2 md:w-[50%]">
                                 <motion.h3
-                                    className="text-2xl font-bold uppercase text-primary"
+                                    className="my-2 text-2xl font-bold uppercase text-primary"
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4 }}
@@ -109,7 +109,7 @@ const Warehousing = () => {
                                     {item.content}
                                 </motion.p>
                                 <motion.button
-                                    className="flex w-fit justify-start rounded-full bg-primary px-4 py-2 font-roboto-bold font-bold text-black"
+                                    className="mt-6 flex w-fit justify-start rounded-full bg-primary px-4 py-2 font-roboto-bold font-bold text-black"
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.8 }}
