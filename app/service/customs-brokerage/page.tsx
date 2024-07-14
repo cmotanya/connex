@@ -19,8 +19,6 @@ const CustomsBrokerage = () => {
         },
     };
 
-
-
     return (
         <motion.section
             className="font-roboto-regular text-200"
@@ -171,8 +169,6 @@ const CustomsBrokerage = () => {
                     Contact Us for a Consultation
                 </motion.button>
             </motion.div>
-
-            <Footer />
         </motion.section>
     );
 };

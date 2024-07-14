@@ -130,8 +130,6 @@ const Warehousing = () => {
                     </motion.div>
                 ))}
             </div>
-
-            <Footer />
         </motion.section>
     );
 };

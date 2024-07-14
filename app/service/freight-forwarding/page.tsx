@@ -194,8 +194,6 @@ const FreightForwarding = () => {
                     </motion.div>
                 </motion.div>
             </motion.section>
-
-            <Footer />
         </>
     );
 };
