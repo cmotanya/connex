@@ -82,11 +82,7 @@ const FreightForwarding = () => {
                         Efficient global logistics solutions for seamless
                         clearing and forwarding.
                     </motion.h1>
-                    <motion.div
-                        variants={itemVariants}
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                    >
+                    <motion.div variants={itemVariants}>
                         <Image
                             src={
                                 "https://img.freepik.com/free-photo/scene-with-photorealistic-logistics-operations-proceedings_23-2151468882.jpg?t=st=1720710123~exp=1720713723~hmac=6dc182165eb372a5e5446529fd4923ad0929d69af93ed992ec4df95e82ae1c2b&w=740"

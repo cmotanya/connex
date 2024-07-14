@@ -169,7 +169,7 @@ const Footer = () => {
                     Limited.All rights reserved
                 </p>
 
-                <div className="flex gap-7 whitespace-nowrap md:justify-between">
+                <div className="flex gap-5 whitespace-nowrap md:justify-between">
                     <motion.button whileHover={{ scale: 1.05 }}>
                         Privacy Policy
                     </motion.button>

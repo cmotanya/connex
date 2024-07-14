@@ -94,7 +94,7 @@ const Warehousing = () => {
                                     className="text-2xl font-bold uppercase text-primary"
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: 0.4 }}
+                                    transition={{ delay: 0.4 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                 >
                                     {item.title}
@@ -103,7 +103,7 @@ const Warehousing = () => {
                                     className="w-full text-balance text-lg"
                                     initial={{ opacity: 0, y: -50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: 0.6 }}
+                                    transition={{ delay: 0.6 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                 >
                                     {item.content}
@@ -112,7 +112,7 @@ const Warehousing = () => {
                                     className="flex w-fit justify-start rounded-full bg-primary px-4 py-2 font-roboto-bold font-bold text-black"
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.5, delay: 0.8 }}
+                                    transition={{ delay: 0.8 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                 >
                                     {item.buttonText}
