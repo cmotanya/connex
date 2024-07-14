@@ -65,6 +65,8 @@ const MainPage = () => {
                             sizes="100vw"
                             priority
                             fill
+                            placeholder="blur"
+                            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjFmMSIvPjwvc3ZnPg=="
                             className="object-cover object-center"
                         />
                         <div className="absolute inset-0 bg-800 opacity-50"></div>
@@ -121,6 +123,8 @@ const MainPage = () => {
                                     alt={item.description}
                                     fill
                                     sizes="(max-width: 768px) 80px, 112px"
+                                    placeholder="blur"
+                                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjFmMSIvPjwvc3ZnPg=="
                                     className="object-fit object-cover"
                                 />
                                 <div className="absolute inset-0 bg-800 opacity-50"></div>
