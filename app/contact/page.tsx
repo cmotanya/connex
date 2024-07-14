@@ -1,10 +1,15 @@
 import React from "react";
 import Header from "../header-page";
+import Image from "next/image";
 
 function Contact() {
     return (
         <section>
             <Header />
+
+            <div className="h-dvh">
+                <Image src={"/images/aboutUs.jpg"} alt="logo image" fill />
+            </div>
             <form action="">
                 <h1>Have a Question - Contact Us</h1>
                 <div>

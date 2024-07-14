@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { images } from "./data";
 import { cn } from "@/app/utils/cn";
-import Footer from "@/app/footer";
 import { motion } from "framer-motion";
 
 const Warehousing = () => {
@@ -94,6 +93,8 @@ const Warehousing = () => {
                                     alt={item.alt}
                                     width={400}
                                     height={400}
+                                    placeholder="blur"
+                                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjFmMSIvPjwvc3ZnPg=="
                                     className="w-full rounded-md object-cover object-center"
                                 />
                             </motion.div>

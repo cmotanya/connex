@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Footer from "@/app/footer";
 import { images } from "./data";
 
 const CustomsBrokerage = () => {
@@ -94,6 +93,8 @@ const CustomsBrokerage = () => {
                                 alt=""
                                 width={500}
                                 height={500}
+                                placeholder="blur"
+                                blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjFmMSIvPjwvc3ZnPg=="
                                 className="mx-auto h-52 w-full rounded-md object-cover object-center"
                             />
                         </motion.div>

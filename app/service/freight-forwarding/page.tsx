@@ -3,8 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { images, services } from "./data";
-import Footer from "@/app/footer";
-import { delay, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
 const FreightForwarding = () => {
     const containerVariants = {
