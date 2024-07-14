@@ -64,7 +64,12 @@ const CustomsBrokerage = () => {
             </div>
 
             <div className="mx-auto max-w-7xl px-2 pb-2 pt-10 md:pb-5">
-                <motion.div variants={itemVariant}>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                >
                     <h2 className="text-3xl font-bold uppercase text-primary">
                         Navigating the complexities of International trade
                     </h2>
@@ -111,7 +116,7 @@ const CustomsBrokerage = () => {
 
             <motion.div
                 className="mx-auto mt-5 w-full bg-850 px-3 py-5 md:pl-12"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true, amount: 0.1 }}
@@ -174,7 +179,7 @@ const CustomsBrokerage = () => {
                     viewport={{ once: true, amount: 0.1 }}
                 >
                     {" "}
-                    Contact Us for a Consultation.
+                    Contact Us for a Consultation
                 </motion.button>
             </motion.div>
 
