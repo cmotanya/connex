@@ -86,9 +86,16 @@ const CustomsBrokerage = () => {
                     {images.map((image, index) => (
                         <motion.div
                             key={index}
-                            variants={itemVariant}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{ scale: 1.05 }}
-                            transition={{ type: "spring", stiffness: 300 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 300,
+                                duration: 0.5,
+                                delay: index * 0.1,
+                            }}
+                            viewport={{ once: true, amount: 0.1 }}
                         >
                             <Image
                                 src={image.src}
@@ -104,13 +111,16 @@ const CustomsBrokerage = () => {
 
             <motion.div
                 className="mx-auto mt-5 w-full bg-850 px-3 py-5 md:pl-12"
-                variants={itemVariant}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.1 }}
             >
-                <h2 className="text-2xl text-accent">
+                <h2 className="text-2xl font-bold text-accent">
                     Why choose our Customs Brokerage Services?
                 </h2>
                 <ul className="max-w-4xl list-disc space-y-5 pl-6 pt-2 text-left text-300 marker:text-primary">
-                    <li className="">
+                    <li>
                         <strong>Expert Knowledge:</strong> Our team of licensed
                         customs brokers possesses in-depth knowledge of customs
                         regulations and procedures across multiple
@@ -155,13 +165,17 @@ const CustomsBrokerage = () => {
                     </li>
                 </ul>
 
-                <button
+                <motion.button
                     type="button"
                     className="mt-8 rounded-full bg-primary p-3 font-bold text-black"
+                    initial={{ scale: 0.5 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     {" "}
                     Contact Us for a Consultation.
-                </button>
+                </motion.button>
             </motion.div>
 
             <Footer />
