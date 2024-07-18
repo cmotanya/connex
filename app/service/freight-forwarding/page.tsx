@@ -85,7 +85,7 @@ const FreightForwarding = () => {
                     <motion.div variants={itemVariants}>
                         <Image
                             src={
-                                "https://img.freepik.com/free-photo/scene-with-photorealistic-logistics-operations-proceedings_23-2151468882.jpg?t=st=1720710123~exp=1720713723~hmac=6dc182165eb372a5e5446529fd4923ad0929d69af93ed992ec4df95e82ae1c2b&w=740"
+                                "https://images.pexels.com/photos/20581299/pexels-photo-20581299/free-photo-of-cranes-over-a-container-ship.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             }
                             alt="boat on a dock"
                             width={1300}
@@ -114,20 +114,20 @@ const FreightForwarding = () => {
                     variants={containerVariants}
                 >
                     <motion.h2
-                        className="mb-4 font-roboto-bold text-4xl font-semibold uppercase text-accent md:mb-8 md:text-5xl"
+                        className="mb-4 text-4xl font-semibold uppercase font-poppins-bold text-accent md:mb-8 md:text-5xl"
                         variants={fadeInUpVariants}
                     >
                         Services Offered
                     </motion.h2>
 
                     <motion.div
-                        className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
+                        className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3 font-poppins-regular"
                         variants={containerVariants}
                     >
                         {services.map((service, index) => (
                             <motion.div
                                 key={index}
-                                className="rounded-lg bg-800 p-6 font-roboto-bold shadow-md transition-all duration-300"
+                                className="rounded-lg bg-800 p-6 shadow-md transition-all duration-300"
                                 variants={itemVariants}
                                 whileHover={{
                                     scale: 1.03,
@@ -137,7 +137,7 @@ const FreightForwarding = () => {
                                     {service.title}
                                 </h3>
                                 <h4 className="my-1 text-500">Key Features:</h4>
-                                <ul className="list-inside list-disc space-y-1 font-roboto-regular marker:text-primary">
+                                <ul className="list-inside list-disc space-y-1 marker:text-primary">
                                     {service.content.map((item, index) => (
                                         <li key={index} className="text-200">
                                             {item.item}
@@ -149,7 +149,7 @@ const FreightForwarding = () => {
                     </motion.div>
 
                     <motion.button
-                        className="mt-8 rounded-full bg-primary px-4 py-3 font-bold text-black shadow-md hover:bg-accent"
+                        className="mt-8 rounded-full bg-primary px-4 py-3 font-bold text-black shadow-md hover:bg-accent font-poppins-semibold"
                         whileHover={{
                             scale: 1.05,
                         }}
@@ -165,7 +165,7 @@ const FreightForwarding = () => {
                     variants={containerVariants}
                 >
                     <motion.h2
-                        className="mb-2 font-roboto-bold text-3xl font-semibold text-accent md:mb-8 md:text-4xl"
+                        className="mb-2 text-3xl font-semibold text-accent md:mb-8 md:text-4xl"
                         variants={fadeInUpVariants}
                     >
                         Our Global Reach

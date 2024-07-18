@@ -21,7 +21,7 @@ const CustomsBrokerage = () => {
 
     return (
         <motion.section
-            className="font-roboto-regular text-200"
+            className="text-200"
             initial="hidden"
             whileInView="visible"
             variants={containerVariant}

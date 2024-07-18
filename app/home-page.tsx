@@ -48,7 +48,7 @@ const MainPage = () => {
     };
 
     return (
-        <section className="h-dvh w-dvw overflow-hidden font-roboto-medium">
+        <section className="h-dvh w-dvw overflow-hidden">
             <div className="relative h-full">
                 <AnimatePresence initial={false}>
                     <motion.div
@@ -68,8 +68,9 @@ const MainPage = () => {
                             fill
                             placeholder="blur"
                             blurDataURL={getBlurDataURL()}
+                            className="object-cover object-center"
                         />
-                        <div className="absolute inset-0 bg-800 opacity-50"></div>
+                        {/* <div className="absolute inset-0"></div> */}
                     </motion.div>
                 </AnimatePresence>
 
@@ -80,29 +81,36 @@ const MainPage = () => {
                         exit="exit"
                         variants={containerVariants}
                         key={`content-${currentIndex}`}
-                        className="absolute top-[15%] z-[999] space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[20%] md:top-1/4 md:w-[50%] md:text-start"
+                        className="absolute top-[15%] z-[999] w-full space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[10%] md:top-[15%] md:w-[60%] md:p-8 md:text-start"
                     >
-                        <div
+                        <div className="absolute inset-0 h-full rounded-lg bg-850"></div>
+                        <h1
                             className={cn(
-                                "transform text-6xl font-bold text-primary transition-all [letter-spacing:6px]",
+                                "transform text-6xl font-bold text-primary transition-all md:[letter-spacing:6px]",
                                 isAnimating ? "animate-exit" : "animate-enter"
                             )}
                         >
                             {homeImage[currentIndex].title}
-                        </div>
-                        <div
+                        </h1>
+                        <p
                             className={cn(
                                 "transform transition-all",
                                 isAnimating ? "animate-exit" : "animate-enter"
                             )}
                         >
                             {homeImage[currentIndex].description}
-                        </div>
-                        <div className="grid transform animate-enter grid-flow-row gap-4 transition-all md:grid-flow-col">
-                            <button className="rounded-lg bg-primary px-4 py-3 uppercase text-black">
+                        </p>
+                        <div className="grid transform animate-enter grid-flow-row gap-4 font-poppins-semibold transition-all md:grid-flow-col">
+                            <button
+                                type="button"
+                                className="rounded-full bg-primary px-4 py-4 uppercase text-black"
+                            >
                                 {homeImage[currentIndex].button1}
                             </button>
-                            <button className="rounded-lg bg-850 px-4 py-3 uppercase hover:bg-700">
+                            <button
+                                type="button"
+                                className="rounded-full bg-800 px-4 py-4 uppercase hover:bg-700"
+                            >
                                 {homeImage[currentIndex].button2}
                             </button>
                         </div>
@@ -125,8 +133,9 @@ const MainPage = () => {
                                     sizes="(max-width: 768px) 80px, 112px"
                                     placeholder="blur"
                                     blurDataURL={getBlurDataURL()}
+                                    className="object-cover object-center"
                                 />
-                                <div className="absolute inset-0 bg-800 opacity-50"></div>
+                                <div className="absolute inset-0 bg-850"></div>
                                 <div className="absolute bottom-3 left-3 z-[100] h-[30%] overflow-clip text-ellipsis text-balance text-sm text-200">
                                     {item.description}
                                 </div>

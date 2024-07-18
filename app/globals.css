@@ -3,24 +3,56 @@
 @tailwind utilities;
 
 @layer base {
-    /* Roboto bold. */
+    /* Oswald */
     @font-face {
-        font-family: "Roboto-Bold";
-        src: url("./../public/font/Lato-Bold.ttf") format("truetype");
-        font-weight: 800;
-        font-display: swap;
-    }
-    /* Roboto medium. */
-    @font-face {
-        font-family: "Roboto-Medium";
-        src: url("./../public/font/Oswald-Regular.ttf") format("truetype");
+        font-family: "Oswald";
+        src: url("./../public/font/Oswald/Oswald-Regular.ttf")
+            format("truetype");
         font-weight: 600;
         font-display: swap;
     }
-    /* Roboto regular. */
+
+    /* Poppins */
     @font-face {
-        font-family: "Roboto-Regular";
-        src: url("./../public/font/Lato-Regular.ttf") format("truetype");
+        font-family: "Poppins-Regular";
+        src: url("./../public/font/Poppins/Poppins-Regular.ttf")
+            format("truetype");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Poppins-Semibold";
+        src: url("./../public/font/Poppins/Poppins-SemiBold.ttf")
+            format("truetype");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Poppins-Bold";
+        src: url("./../public/font/Poppins/Poppins-Bold.ttf") format("truetype");
+        font-weight: 400;
+        font-display: swap;
+    }
+
+    /* Montserrat */
+    @font-face {
+        font-family: "Montserrat-Regular";
+        src: url("./../public/font/Montserrat/Montserrat-Regular.ttf")
+            format("truetype");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Montserrat-Semibold";
+        src: url("./../public/font/Montserrat/Montserrat-SemiBold.ttf")
+            format("truetype");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Montserrat-Bold";
+        src: url("./../public/font/Montserrat/Montserrat-Bold.ttf")
+            format("truetype");
         font-weight: 400;
         font-display: swap;
     }
@@ -53,7 +85,7 @@
     }
 
     body {
-        @apply relative min-h-screen bg-slate-900 font-roboto-regular text-lg text-black;
+        @apply font-poppins-regular relative min-h-screen bg-slate-900 text-lg text-black;
     }
     body.no-scroll {
         @apply overflow-hidden;

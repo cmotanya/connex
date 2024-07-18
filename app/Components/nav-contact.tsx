@@ -49,7 +49,7 @@ const NavContactSection = () => {
 
     return (
         <motion.div
-            className="flex-shrink-0 bg-950 p-2 font-roboto-regular text-lg"
+            className="flex-shrink-0 bg-950 p-2 text-lg"
             variants={containerVariant}
             initial="hidden"
             animate="visible"

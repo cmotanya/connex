@@ -33,7 +33,7 @@ const Footer = () => {
 
     return (
         <motion.footer
-            className="absolute left-0 right-0 w-full bg-800 p-2 pt-2 md:pt-5"
+            className="absolute left-0 right-0 w-full bg-800 p-2 pt-2 font-poppins-regular md:pt-5"
             initial="hidden"
             animate="visible"
             variants={containerVariants}

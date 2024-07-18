@@ -117,7 +117,7 @@ const Warehousing = () => {
                                     {item.content}
                                 </motion.p>
                                 <motion.button
-                                    className="mt-6 flex w-fit justify-start rounded-full bg-primary px-4 py-2 font-roboto-bold font-bold text-black"
+                                    className="mt-6 flex w-fit justify-start rounded-full bg-primary px-4 py-2  font-bold text-black"
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.8 }}

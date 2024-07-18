@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <header
             className={cn(
-                "duration-400 fixed z-[9999] flex h-24 w-full items-center justify-between bg-transparent px-5 font-roboto-medium transition-colors",
+                "duration-400 fixed z-[9999] flex h-24 w-full items-center justify-between bg-transparent px-5 transition-colors",
                 hasScrolled ? "bg-800 shadow-2xl" : "bg-transparent"
             )}
         >
