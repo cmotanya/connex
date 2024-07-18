@@ -83,7 +83,7 @@ const MainPage = () => {
                         key={`content-${currentIndex}`}
                         className="absolute top-[15%] z-[999] w-full space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[10%] md:top-[15%] md:w-[60%] md:p-8 md:text-start"
                     >
-                        <div className="absolute inset-0 h-full rounded-lg bg-850"></div>
+                        <div className="invisible absolute inset-0 h-full rounded-lg bg-850 md:visible"></div>
                         <h1
                             className={cn(
                                 "transform text-6xl font-bold text-primary transition-all md:[letter-spacing:6px]",

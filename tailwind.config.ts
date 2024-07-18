@@ -13,18 +13,11 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                "lato-regular": ["Lato-Regular", "sans-serif"],
-                "lato-bold": ["Lato-Bold", "sans-serif"],
-
                 oswald: ["Oswald", "sans-serif"],
 
                 "poppins-regular": ["Poppins-Regular", "sans-serif"],
                 "poppins-semibold": ["Poppins-Semibold", "sans-serif"],
                 "poppins-bold": ["Poppins-Bold", "sans-serif"],
-
-                "montserrat-regular": ["Montserrat-Regular", "sans-serif"],
-                "montserrat-semibold": ["Montserrat-Semibold", "sans-serif"],
-                "montserrat-bold": ["Montserrat-Bold", "sans-serif"],
             },
 
             colors: {
