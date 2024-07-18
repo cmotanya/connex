@@ -34,6 +34,7 @@ const CustomsBrokerage = () => {
                     fill
                     placeholder="blur"
                     blurDataURL={getBlurDataURL()}
+                    className="object-cover object-center"
                 />
                 <div className="absolute inset-0 h-full bg-850"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -95,6 +96,7 @@ const CustomsBrokerage = () => {
                                 height={500}
                                 placeholder="blur"
                                 blurDataURL={getBlurDataURL()}
+                                className="w-full rounded-lg object-cover object-center"
                             />
                         </motion.div>
                     ))}
