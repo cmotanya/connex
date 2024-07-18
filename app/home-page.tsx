@@ -81,7 +81,7 @@ const MainPage = () => {
                         exit="exit"
                         variants={containerVariants}
                         key={`content-${currentIndex}`}
-                        className="absolute top-[15%] z-[999] w-full space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[10%] md:top-[15%] md:w-[60%] md:p-8 md:text-start"
+                        className="absolute top-[10%] z-[999] w-full space-y-6 text-balance p-2 text-center text-200 drop-shadow-lg md:left-[10%] md:top-[15%] md:w-[60%] md:p-8 md:text-start"
                     >
                         <div className="invisible absolute inset-0 h-full rounded-lg bg-850 md:visible"></div>
                         <h1
@@ -103,13 +103,13 @@ const MainPage = () => {
                         <div className="grid transform animate-enter grid-flow-row gap-4 font-poppins-semibold transition-all md:grid-flow-col">
                             <button
                                 type="button"
-                                className="rounded-full bg-primary px-4 py-4 uppercase text-black"
+                                className="rounded-full bg-primary px-4 py-3 uppercase text-black md:px-4 md:py-4"
                             >
                                 {homeImage[currentIndex].button1}
                             </button>
                             <button
                                 type="button"
-                                className="rounded-full bg-800 px-4 py-4 uppercase hover:bg-700"
+                                className="rounded-full bg-800 px-4 py-3 uppercase hover:bg-700 md:py-4"
                             >
                                 {homeImage[currentIndex].button2}
                             </button>
