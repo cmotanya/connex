@@ -1,6 +1,6 @@
 "use client";
 
-import { IconBrandWhatsapp, IconPlus } from "@tabler/icons-react";
+import { IconPlus } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import navElements from "../lib/nav-elements";
@@ -259,7 +259,7 @@ const MobileNav = () => {
                                                                                     sub.href
                                                                                 }
                                                                                 className={cn(
-                                                                                    "my-1 block transform rounded-md px-2 py-3 transition-all duration-300 active:scale-95",
+                                                                                    "my-1 block transform rounded-md px-2 py-3 font-poppins-semibold text-base transition-all duration-300 active:scale-95",
                                                                                     isSubActive
                                                                                         ? "text-primary"
                                                                                         : "bg-800 hover:bg-850"

@@ -34,11 +34,11 @@ const About = () => {
                     fill
                     placeholder="blur"
                     blurDataURL={getBlurDataURL()}
+                    className="object-cover object-center"
                 />
-                <div className="absolute inset-0 h-full bg-850"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
-                        className="text-balance rounded-md bg-850 p-6 text-center font-bold text-300"
+                        className="text-balance rounded-md p-6 text-center font-bold text-300"
                         initial={{ scale: 0.5 }}
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -47,7 +47,7 @@ const About = () => {
                         <h1 className="pb-8 text-center uppercase md:text-5xl">
                             Expert Customs Brokerage Services
                         </h1>
-                        <p className="text-center uppercase text-primary">
+                        <p className="text-center uppercase text-900">
                             {" "}
                             Originally founded in 2013, Connex International is
                             one of the largest logistics company in Ambalalo. We
@@ -58,9 +58,9 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="bg-800 p-2 md:p-12">
+            <div className="bg-800 p-2 md:p-6">
                 <div>
-                    <h3 className="mt-5 text-2xl font-bold uppercase text-primary">
+                    <h3 className="mt-5 font-poppins-semibold text-2xl uppercase text-primary">
                         Our Mission:
                     </h3>
                     <p className="py-2 md:py-5">
@@ -82,7 +82,7 @@ const About = () => {
                             <h4 className="mt-4 text-xl font-bold text-primary">
                                 {item.title}
                             </h4>
-                            <p className="mt-1 text-center text-gray-300">
+                            <p className="mt-1 text-center text-400 text-base">
                                 {item.content}
                             </p>
                         </div>

@@ -8,22 +8,31 @@ import navElements from "../lib/nav-elements";
 import { useEffect, useRef, useState } from "react";
 
 const DesktopNav = () => {
-    const [openIndicator, setOpenIndicator] = useState<number | null>(null);
-    const [activeLink, setActiveLink] = useState<string | null>(null);
+    const [openIndicator, setOpenIndicator] = useState<string | null>(null);
+    const [activeItem, setActiveItem] = useState<{
+        [key: string]: string | null;
+    }>({});
     const navRef = useRef<HTMLElement>(null);
 
-    const handleToggle = (index: number) => {
-        setOpenIndicator(openIndicator === index ? null : index);
+    const handleToggle = (href: string) => {
+        setOpenIndicator(openIndicator === href ? null : href);
     };
 
-    const handleLinkClick = (href: string, index: number) => {
-        setActiveLink(href);
+    const handleLinkClick = (main: string, sub: string | null) => {
+        setActiveItem((prev) => ({
+            ...prev,
+            [main]: sub,
+        }));
 
-        if (openIndicator !== index) {
+        if (sub === null) {
+            // If it is a main item click, toggle the sub menu
+            setOpenIndicator((prev) => (prev === main ? null : main));
+        } else {
             setOpenIndicator(null);
         }
     };
 
+    // Handles click event when it occurs outside of the navRef element
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
@@ -43,7 +52,7 @@ const DesktopNav = () => {
     return (
         <nav ref={navRef} className="hidden text-lg md:flex">
             {navElements.map((item, index) => {
-                const isActive = activeLink === item.href;
+                const isActive = activeItem.main === item.href;
                 return (
                     <ul
                         key={item.href}
@@ -53,10 +62,10 @@ const DesktopNav = () => {
                             <Link
                                 href={item.href}
                                 onClick={(e) => {
-                                    handleLinkClick(item.href, index);
+                                    handleLinkClick(item.href, null);
                                     if (item.subItems.length > 0) {
                                         e.preventDefault();
-                                        handleToggle(index);
+                                        handleToggle(item.href);
                                     }
                                 }}
                                 className={cn(
@@ -72,9 +81,9 @@ const DesktopNav = () => {
                                 {item.subItems.length > 0 && (
                                     <span
                                         className="cursor-pointer"
-                                        onClick={() => handleToggle(index)}
+                                        onClick={() => handleToggle(item.href)}
                                     >
-                                        {openIndicator === index ? (
+                                        {openIndicator === item.href ? (
                                             <IconPlus className="rotate-45 transform transition" />
                                         ) : (
                                             <IconPlus className="transition" />
@@ -87,7 +96,7 @@ const DesktopNav = () => {
                         {/* Sub menu */}
                         <AnimatePresence>
                             {item.subItems.length > 0 &&
-                                openIndicator === index && (
+                                openIndicator === item.href && (
                                     <motion.li
                                         initial={{ opacity: 0, height: 0 }}
                                         animate={{
@@ -101,12 +110,12 @@ const DesktopNav = () => {
                                         }}
                                         transition={{ duration: 0.2 }}
                                         className={cn(
-                                            "absolute left-0 top-full z-50 mt-1 w-full overflow-hidden rounded-sm bg-secondary"
+                                            "absolute left-0 top-full z-50 mt-1 w-full overflow-hidden rounded-md bg-secondary"
                                         )}
                                     >
                                         {item.subItems.map((sub, index) => {
-                                            const isActive =
-                                                activeLink === sub.href;
+                                            const isSubActive =
+                                                activeItem.sub === sub.href;
                                             return (
                                                 <motion.div
                                                     key={sub.href}
@@ -121,15 +130,15 @@ const DesktopNav = () => {
                                                     <Link
                                                         href={sub.href}
                                                         className={cn(
-                                                            "block rounded-sm px-2 py-1",
-                                                            isActive
+                                                            "block rounded-sm px-2 py-2 font-poppins-semibold text-sm",
+                                                            isSubActive
                                                                 ? "bg-accent"
                                                                 : "bg-secondary hover:bg-accent"
                                                         )}
                                                         onClick={() =>
                                                             handleLinkClick(
-                                                                sub.href,
-                                                                index
+                                                                item.href,
+                                                                sub.href
                                                             )
                                                         }
                                                     >

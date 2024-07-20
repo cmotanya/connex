@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import homeImage from "./lib/image-links";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
@@ -10,8 +10,12 @@ import { getBlurDataURL } from "./lib/blur-image";
 
 const MainPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    // const [animationKey, setAnimationKey] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {}, 300);
+        return () => clearInterval(interval);
+    }, [currentIndex]);
 
     const handleSlideChange = (newIndex: number) => {
         if (!isAnimating) {
